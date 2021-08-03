@@ -1,0 +1,15 @@
+﻿body{
+    background-image:linear-gradient(blue , red);
+    height:3000px;
+}
+
+.header{
+    text-align:center;
+    color:deeppink;
+}
+
+.nav, ul , li{
+    text-align:center;
+    border-radius:20px;
+    color:blue;
+}

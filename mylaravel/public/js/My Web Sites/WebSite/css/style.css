@@ -1,0 +1,198 @@
+﻿
+body {
+    background-color: wheat;
+    color: black;
+    font-family: Roboto;
+    font-size: 15px;
+    max-width: 620px;
+}
+
+p{
+    font-weight:100;
+    line-height:1em;
+
+}
+
+#active{
+    color:purple;
+}
+
+
+/*banner*/
+#banner {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+    background-attachment: fixed;
+    color: black;
+}
+
+    #banner h1 {
+        color: blue;
+    }
+
+    #banner h3 {
+        color: darkred;
+    }
+
+#slideout-menu {
+    display: none;
+    background: wheat;
+    font-family: Arial;
+    color: crimson;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#main{
+    background-color:cornflowerblue;
+    color:lightcyan;
+    
+}
+
+
+#main > ul{
+    padding:20px;
+    border:solid;
+}
+/*btn-readmore*/
+.btn-readmore {
+    padding-bottom: 12px;
+    color: brown;
+    background-color: blue;
+    border: double;
+    border-right: 1px solid;
+    margin: 7px;
+}
+
+    .btn-readmore:hover {
+        transition: 6s;
+    }
+
+/*header-nav*/
+#header-nav {
+    background-color: green;
+}
+
+#header-nav-1 {
+    background-color: green;
+}
+
+/*h2*/
+#h2 {
+    color: deeppink;
+}
+
+#comment-2 {
+    background-color: red;
+    padding-left: 30%;
+}
+
+
+/*nav*/
+nav {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: brown;
+}
+
+li {
+    justify-content: center;
+    padding: 10px;
+    border-right: 2px solid #808080;
+}
+
+    li:last-child {
+        border-right: none;
+    }
+
+#active {
+    background-color: blue;
+    width: 100%;
+}
+
+li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+    li a:hover {
+        background-color: #111;
+        color: #ff0000;
+    }
+
+ul {
+    list-style-type: none;
+    color: #dddddd;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+#section-heading {
+    text-align: center;
+    color: #0026ff
+}
+
+
+
+#Quick-links {
+    text-align: center;
+    background-color: #ff0000;
+    color: aqua;
+}
+
+/*footer paragraph*/
+#Footer-paragraph {
+    text-align: center;
+}
+
+#left-footer{
+    background:blue;
+    color:purple;
+}
+
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* half width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+        background-color: brown;
+    }
+
+/* Add a background color and some padding around the form */
+#container {
+}
+
+
