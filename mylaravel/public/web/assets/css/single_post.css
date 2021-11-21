@@ -1,0 +1,490 @@
+*{
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  
+  /* Add a black background color to the top navigation */
+  .topnav {
+      background-color:#234876;
+      overflow: hidden;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+      color: red;
+    }
+    
+    /* Add an active class to highlight the current page */
+    .topnav a.active {
+      background-color:#234876;
+      color:pink;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+  
+    .top .icon hover{
+        background: #04AA6D;
+    }
+    
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav .icon {
+      display: none;
+    }
+  
+  
+  
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {display: none;}
+      .topnav a.icon {
+      text-align: center;
+       display: block;
+      }
+  
+       .topnav{
+         background: #234876;
+       
+       }
+    }
+    
+    /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {position: relative;}
+      .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        
+      
+      }
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      } 
+  
+      .topnav .join-us button{
+        width: 10%;
+        display: block;
+        padding: 8px;
+        margin-bottom: 80px;
+        background:green;
+        color: white;
+        font-size: 10px;
+       outline: none;
+       border: none;
+      }
+  
+      .form-group input{
+       width: 10%;
+     }
+  
+     .contact-section h4{
+      justify-content: center;
+      text-align: center;
+      border-bottom: 2px solid gray ;
+    }
+    
+     
+     .form-group .btn-contact{
+       width: 10%;
+     }
+  
+  
+     #map{
+      width: 100%;
+      height: 40vh;
+      margin-top: 20%;
+      margin-bottom: 50%;
+    }
+  
+    }
+  
+     /* media queries end */
+  
+      .topnav .join-us button{
+        float: right;
+        width: 20%;
+        padding: 8px;
+        background:green;
+        color: white;
+        font-size: 20px;
+       margin: 20px 10px 0px 0px;
+       outline: none;
+       border: none;
+      }
+  
+     
+       /* live chat */
+          
+       .live-chat{
+        margin-top: 10px; 
+        display: flex;
+        justify-content: space-between;
+     }
+     
+     .live-chat .fa-comment{
+      font-size: 40px;
+       color: #234876;
+       cursor: pointer;
+     }
+  
+       /* live chat end here */
+  
+  
+      .news-letter button{
+        margin-top: 5px;
+        padding: 8px;
+        background: #041120;
+       border: none;
+       border-radius: 5px;
+       text-transform: uppercase;
+       color: white;
+       font-size: 18px;
+       line-height: 1.5rem;
+       font-family:Georgia, 'Times New Roman', Times, serif;
+      }
+  
+  
+     .container-fluid{
+       margin-top: 20px;
+     }
+  
+     .image-content{
+      margin-top: 10px;
+     }
+     .image-content , img{
+       width: 100%;
+       margin: 0% 0% 00% 0%;
+       
+     }
+  
+     .img-option{
+       display: flex;
+       justify-content: space-between;
+       background: #234876;
+       color: white;
+       padding: 8px;
+       margin-bottom: 10px;
+     }
+  
+     .img-option:hover{
+         cursor:pointer;
+     }
+  
+     .footer{
+       background: #234876;
+       padding: 30px;
+       margin: 10px;
+       border-radius: 10px 10px 0px 0px;
+     }
+  
+     .footer b{
+      color: white;
+      font-size: 24px;
+      text-transform: capitalize;
+     }
+  
+     .footer ul li{
+       list-style: none;
+       font-size: 18px;
+     }
+  
+     .footer li a{
+       text-decoration: none;
+       cursor: pointer;
+     }
+  
+     .social-media .fa{
+       text-transform: capitalize;
+       background:  #61a5f8;
+       border-radius: 50px;
+       padding: 10px;
+       margin: 2px;
+     }
+      .social-media li a{
+        color: rgb(238, 225, 200);
+      }
+  
+      .social-media a:hover{
+        color: red;
+      }
+  
+      .contact-info .fa{
+        text-transform: capitalize;
+        background:  #61a5f8;
+        border-radius: 50px;
+        padding: 12px;
+        margin: 2px 4px ;
+      }
+  
+      .contact-info li a{
+        color: rgb(238, 225, 200);
+      }
+  
+      .our-product li{
+       color: rgba(255, 255, 255, 0.397);
+       text-decoration: overline white;
+       padding-bottom: 8px;
+      }
+  
+  
+      /*navbar-2 */
+      .navbar-2{
+        background: #234876;
+        padding: 20px;
+       
+      }
+  
+     
+  
+      .navbar-2 input{
+        padding: 8px;
+        outline: none;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 20px;
+        
+      }
+  
+  
+      /* ownership */
+  
+     .owership p{
+       text-align: center;
+       font-size: 18px;
+       color: white;
+     }
+  
+     .owership b{
+      font-size: 18px;
+      color: pink;
+     }
+  
+     /* privacy */
+  
+     .privacy li a{
+      color: rgba(255, 255, 255, 0.397);
+      padding-bottom: 10px;
+      text-decoration: none;
+      cursor: pointer;
+     }
+  
+     /* privacy */
+  
+     .privacy a:hover{
+       color: red;
+     }
+  
+     .category{
+       width: 100%;
+       margin-top: 18px;
+       
+     }
+  
+     .category h4{
+        color: white;
+     }
+  
+     .category select{
+       width: 80%;
+       padding: 12px;
+       border-radius: 6px;
+       font-size: 18px;
+       text-transform: uppercase;
+       background: #234876;
+       color: white;
+     }
+  
+     .category option{
+       padding-left: 10px;
+       font-size: 20px;
+       text-transform: uppercase;
+     }
+  
+  
+  
+     .contact-section{
+       margin:10% 0% 25% 0%;
+     }
+     .contact-section h4{
+       justify-content: center;
+       text-align: center;
+       border-bottom: 2px solid gray ;
+       margin-left: 30px;
+     }
+     
+      
+     .form-group{
+       padding: 10px;
+       width: 100%;
+       height: 40vh;
+     }
+  
+  .form-group input{
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 12px;
+  }
+  
+  .form-group .btn-contact{
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    background:#234876;
+    border: none;
+   text-transform: uppercase;
+   color: white;
+   font-size: 18px;
+   line-height: 1.5rem;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  /* 
+  .live-chat{
+     margin-top: 120px; 
+     display: flex;
+     justify-content: space-between;
+  }
+  
+  .live-chat .fa-comment{
+   font-size: 50px;
+    color: #234876;
+    cursor: pointer;
+  } */
+  
+  
+  
+  #map{
+    width: 100%;
+    height: 30vh;
+   
+  }
+  
+  .back-to-top{
+    float: right;
+  }
+  
+  #fa-search{
+    color: white;
+    font-size: 24px;
+    justify-content: center;
+    cursor: pointer;
+    padding-left: 30px;
+  }
+  
+  
+  
+  
+  .overlay {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 46%;
+    width: 80%;
+    text-align: center;
+    margin-top: 30px;
+    margin: auto;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .overlay .closebtn:hover {
+    color: #ccc;
+  }
+  
+  .overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 80%;
+    background: white;
+  }
+  
+  .overlay input[type=text]:hover {
+    background: #f1f1f1;
+  }
+  
+  .overlay button {
+    float: left;
+    width: 20%;
+    padding: 15px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .overlay button:hover {
+    background: #bbb;
+  }
+
+ .author-profile{
+   font-size: 50px;
+   padding-right: 4px;
+ }
+
+ .content-header{
+   display: block;
+   justify-content: space-around;
+ }
+
+ hr{
+   width: 100%;
+   height: 5px;
+   background: black;
+ }
+
+ .content-body{
+   width: 100%;
+   height: 50vh;
+   background: gray;
+   border-radius: 10px;
+ }
+
+
+ .reaction{
+   display: flex;
+   justify-content: space-around;
+   font-size: 20px;
+   cursor: pointer;
+   margin-bottom: 5%;
+ }
+
+ .fa-play-circle-o:hover{
+   color: red;
+ }
+
+ .title{
+   font-size: 20px;
+ }
+  

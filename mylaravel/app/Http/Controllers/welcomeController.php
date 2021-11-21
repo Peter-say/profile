@@ -11,4 +11,9 @@ class welcomeController extends Controller
 
         return view('welcome');
     }
+
+    public function singlePost()
+    {
+return view('web.single_post');
+    }
 }

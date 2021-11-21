@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Profile;
-
+use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class ProfileController extends Controller
 {
-    /**
+     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -19,9 +19,11 @@ class ProfileController extends Controller
     }
     public function profile()
     {
-        $profiles = Profile::latest()->get();
-        return view('view_profile',[
-            'profiles' => $profiles 
+        $user = auth()->user();
+        $profiles = Profile::latest()->paginate(20);
+        return view('dashboards.admin.users-page',[
+            'profiles' => $profiles ,
+            'user' => $user,
         ]);
          
     }
@@ -45,15 +47,12 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        
-        //  store image for database from here
-       
      
-
-        
+        //  store image for database from here
+   
           $validated = $request->validate([
             'full_name'=> 'required',
-             'email'=> ['required', 'unique:users'],
+             'email'=> ['required', 'unique:users' , 'nullable'],
               'phone' => 'required' , 
               'business_no' => 'required',  
               'role' => 'required',
@@ -66,7 +65,7 @@ class ProfileController extends Controller
                 
             ]);
 
-            $profiles = $request->all();
+            $validated = $request->all();
 
              $profiles = $request->file('image')->getClientOriginalName('image');
                 // if($image = $request->file('image')){
@@ -90,7 +89,7 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        //
+      
     }
 
     /**
@@ -99,9 +98,11 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+    public function edit(Profile $profiles , $id)
+    {    
+        dd($profiles);
+        $profiles = Profile::find(1)->where('$profiles' , $profiles)->first();
+        return view('edit_profile' , compact($profiles));
     }
 
     /**
@@ -111,9 +112,28 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Profile $profiles ,$id)
     {
-        //
+        $validated = $request->validate([
+            'full_name'=> 'required',
+             'email'=> ['required', 'unique:users'],
+              'phone' => 'required' , 
+              'business_no' => 'required',  
+              'role' => 'required',
+              'address' => 'required' ,
+              'profession' => 'required',
+              'country' => 'required',
+              'city' => 'required',
+              'image' => 'required',
+              
+                
+            ]);
+
+             $profiles = Profile::findorfail($id);
+             $profiles = $request->file('image')->getClientOriginalName('image');
+
+             Profile::create($request->first());
+            return back()->with('success', 'profile updated successfully.');
     }
 
     /**
@@ -122,8 +142,10 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    
+    public function destroy(Profile $profile)
     {
-        //
+        $profile->delete();
+        return back()->with('success', 'profile deleted successfully.');
     }
 }
