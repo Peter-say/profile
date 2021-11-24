@@ -2,6 +2,7 @@
 
 @section('contents')
 <div class="container">
+@include('notifications.flash_messages')
     <form method="POST" action="{{ route('register') }}">
         @csrf
         <div class="row">
@@ -51,7 +52,7 @@
 
                 <div class="form-group">
                     <label for=""><i class="fa fa-lock"></i></label>
-                    <input type="password" name="password-confirm" id="" placeholder="Re-Password" class="form-control"  required autocomplete="new-password">
+                    <input type="password" name="password_confirmation" id="" placeholder="Re-Password" class="form-control"  required autocomplete="new-password">
                 </div>
 
                 <button class="login-btn">submit</button>

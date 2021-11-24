@@ -1,6 +1,6 @@
 @extends('web.layouts.app')
 
-@section('contents')
+@section('content')
 
 @include('web.frangments.navbar')
 

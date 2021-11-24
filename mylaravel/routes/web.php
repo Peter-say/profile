@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\Dashboards\Admin\IndexController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,4 +23,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/post/name', [App\Http\Controllers\WelcomeController::class, 'singlePost'])->name('post.name');
+Route::prefix("admin")->as("admin.")->middleware(["verified"  , "admin"])->group(function () {
+   Route::get('/dashboard', [App\Http\Controllers\Dashboards\Admin\IndexController::class, 'admin'])->name('dashboard');
+  
+ });
+
+
+
+
+ Route::get('/post/name', [App\Http\Controllers\WelcomeController::class, 'singlePost'])->name('post.name');
