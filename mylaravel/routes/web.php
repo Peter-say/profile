@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Dashboards\Admin\IndexController;
+use App\Http\Controllers\Dashboards\Admin\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,7 +26,7 @@ Auth::routes();
 
 Route::prefix("admin")->as("admin.")->middleware(["verified"  , "admin"])->group(function () {
    Route::get('/dashboard', [App\Http\Controllers\Dashboards\Admin\IndexController::class, 'admin'])->name('dashboard');
-  
+   Route::resource('/post' , PostController::class);
  });
 
 

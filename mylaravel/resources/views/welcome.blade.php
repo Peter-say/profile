@@ -5,6 +5,7 @@
 @include('web.frangments.navbar')
 
 <div class="container-fluid">
+@include('notifications.flash_messages')
     <div class="row">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
             <div class="img-content">
