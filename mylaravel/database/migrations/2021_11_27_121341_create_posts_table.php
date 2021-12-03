@@ -21,12 +21,13 @@ class CreatePostsTable extends Migration
             $table->string('cover_video');
             $table->string('title');
             $table->enum('type' , ["Blog" , "Vlog"]);
-            $table->text('discription');
+            $table->text('description');
             $table->tinyInteger('is_top_story')->default(0);
             $table->tinyInteger('is_featured')->default(0);
             $table->tinyInteger('is_published')->default(0);
             $table->tinyInteger('can_comment')->default(1);
             $table->tinyInteger('is_sponsored')->default(0);
+            $table->string('view_counts')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

@@ -37,7 +37,7 @@
 
 
                 <button class="login-btn">submit</button>
-                <a href="{{route('login')}}">already have account? login</a>
+                <a href="{{route('register')}}">don't have an account? register</a>
             </div>
         </div>
     </form>

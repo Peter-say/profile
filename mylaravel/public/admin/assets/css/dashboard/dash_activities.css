@@ -1,0 +1,11 @@
+.card-header-page{
+    background: blue;
+    color: white;
+    font-size: 24px;
+}
+
+.card-main-body{
+    background: rgba(212, 202, 202, 0.678);
+    padding: 5%;
+}
+

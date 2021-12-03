@@ -7,11 +7,12 @@
 
 <div class="container">
     <div class="row">
-
+  
+    
         <div class="col-lg-8 col-xl-8 col-md-12 col-sm-12">
             <div class="content-header">
                 <i class="fa fa-user author-profile"></i>
-                <b>Peter Iriogbe</b>
+                <b>{{$post->user->name}}</b>
             </div>
             <div class="title col-lg-8 col-xl-8 col-md-12 col-sm-12">
                 <span><a href="">Microsoft Corporation. All rights
@@ -32,7 +33,7 @@
             <i class="fa fa-heart"></i>
             <i class="fa fa-comment-o"></i>
         </div>
-
+      
     </div>
 </div>
 

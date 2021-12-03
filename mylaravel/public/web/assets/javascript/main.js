@@ -1,33 +1,33 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
   }
+}
 
 
-  function openSearch() {
-    document.getElementById("myOverlay").style.display = "block";
-  }
-  
-  function closeSearch() {
-    document.getElementById("myOverlay").style.display = "none";
-  }
+function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
 
-  var myVideo = document.getElementById("video1"); 
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
 
-function playPause() { 
-  if (myVideo.paused) 
-    myVideo.play(); 
-  else 
-    myVideo.pause(); 
-} 
+var myVideo = document.getElementById("video1");
 
-myVideo.addEventListener('click', function() {
-    myVideo.style.display ="none";
+function playPause() {
+  if (myVideo.paused)
+    myVideo.play();
+  else
+    myVideo.pause();
+}
+
+myVideo.addEventListener('click', function () {
+  myVideo.style.display = "none";
 });
 
 // function makeBig() { 
@@ -42,4 +42,13 @@ myVideo.addEventListener('click', function() {
 //     myVideo.width = 420; 
 // } 
 
-  
+
+var regContainer = document.getElementById('regContainer');
+var regBtn = document.getElementById('regBtn');
+
+
+function regBtn() {
+  var regContainer = document.getElementById('regContainer');
+  regContainer.style.display = "block";
+}
+

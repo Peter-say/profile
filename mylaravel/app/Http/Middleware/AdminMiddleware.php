@@ -20,6 +20,9 @@ class AdminMiddleware
         if (Auth::user()->role == 'Admin') {
             return $next($request);
         }
-        return back()->with('error_message' , 'Only Admin can access this ');
+
+        return redirect('user/dashboard');
+
+        return back()->with('error_message' , 'Not allowed');
     }
 }
